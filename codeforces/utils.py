@@ -123,7 +123,7 @@ def run_test(q_id, f_path):
         outPath2 = os.path.join(f_path, "output.txt")
         inPath = os.path.join(io_path, str(number) + ".in")
         srcPath = os.path.join(f_path, q_id + ".py")
-        cmd = f'poetry run python "{srcPath}" < "{inPath}" > "{outPath2}"'
+        cmd = f'python "{srcPath}" < "{inPath}" > "{outPath2}"'
         os.system(cmd)
         file1 = open(outPath, "r")
         expected = file1.read().strip()

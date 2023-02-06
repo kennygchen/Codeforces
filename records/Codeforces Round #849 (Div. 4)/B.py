@@ -1,8 +1,8 @@
 """
     Name    | Kenny Chen
-    Contest | {contest}
-    Problem | {problem}
-    Time    | {time}
+    Contest | Codeforces Round #849 (Div. 4)
+    Problem | Following Directions
+    Time    | 02/05/2023, 23:43:00
 """
 
 
