@@ -23,4 +23,24 @@ def gcd(a, b):
 
 
 for _ in range(ii(1)):
-    pass
+    start = [0, 0]
+    goal = [1, 1]
+    length = input()
+    s = input()
+    candy = 0
+    for move in s:
+        if move == "U":
+            start[1] += 1
+        elif move == "D":
+            start[1] -= 1
+        elif move == "L":
+            start[0] -= 1
+        elif move == "R":
+            start[0] += 1
+
+        if start[0] == 1 and start[1] == 1:
+            candy = 1
+    if candy:
+        print("YES")
+    else:
+        print("NO")

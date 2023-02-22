@@ -23,4 +23,14 @@ def gcd(a, b):
 
 
 for _ in range(ii(1)):
-    pass
+    length = ii(1)
+    s = input()
+    answer = length
+    left = 0
+    right = length - 1
+
+    while s[left] != s[right] and answer > 0:
+        left += 1
+        right -= 1
+        answer -= 2
+    print(answer)
