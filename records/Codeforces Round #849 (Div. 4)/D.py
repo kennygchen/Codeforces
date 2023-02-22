@@ -23,4 +23,21 @@ def gcd(a, b):
 
 
 for _ in range(ii(1)):
-    pass
+    n = ii(1)
+    s = input()
+    ans = 0
+    sa = set()
+    sb = set()
+    pre1 = []
+    pre2 = []
+
+    for i in range(n):
+        sa.add(s[i])
+        sb.add(s[n - i - 1])
+        pre1.append(len(sa))
+        pre2.append(len(sb))
+    pre2.reverse()
+
+    for i in range(n - 1):
+        ans = max(ans, pre1[i] + pre2[i + 1])
+    print(ans)
