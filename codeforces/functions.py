@@ -12,12 +12,13 @@ from .utils import (
 space = "\n\t"
 # f_name is used to identify usable functions
 
+
 def f_setup():
     url = input("Enter your own GitHub repo URL: ")
     os.system("git remote remove origin")
     if os.system(f"git remote add origin {url}") == 0:
         print("You are all set.")
-    
+
 
 def f_init(contest_id):
     contest_name, questions, url = get_contest(contest_id)
@@ -57,7 +58,7 @@ def f_push():
         os.system("git reset --soft HEAD~1")
         return
     if os.system(f"git push origin C-{get_contest_id()}") == 0:
-        os.system("git checkout master")
+        os.system("git checkout main")
     else:
         print("Undoing lasest commit...")
         os.system("git reset --soft HEAD~1")
