@@ -51,6 +51,8 @@ def f_run(question_id):
 
 
 def f_push():
+    black = f"make black"
+    os.system(black)
     cmd = f'git commit -m "Finish {get_contest_name()}"'
     os.system(cmd)
     if input("Enter `yes` to push to GitHub: ").lower().strip() != "yes":
