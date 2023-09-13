@@ -1,8 +1,8 @@
 """
     Name    | Kenny Chen
-    Contest | {contest}
-    Problem | {problem}
-    Time    | {time}
+    Contest | Codeforces Beta Round 4 (Div. 2 Only)
+    Problem | Watermelon
+    Time    | 09/13/2023, 15:44:45
 """
 import sys
 
@@ -29,8 +29,11 @@ def invr():  # For taking space seperated integer variable inputs
 
 
 def __main__():
-    # write your code here
-    pass
+    input = inp()
+    if input == 2:
+        print("NO")
+    else:
+        print("YES" if input % 2 == 0 else "NO")
 
 
 if __name__ == "__main__":
