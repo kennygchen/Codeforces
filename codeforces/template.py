@@ -9,29 +9,20 @@ import sys
 input = sys.stdin.readline
 
 ############ ---- Input Functions ---- ############
-
-
-def inp():  # For taking integer inputs
-    return int(input())
-
-
-def inlt():  # For taking integer inputs
+def intList():  # For taking List inputs
     return list(map(int, input().split()))
 
 
-def insr():  # For taking string inputs
-    s = input()
-    return list(s[: len(s) - 1])
+def testCases(num=False):
+    i = input().split()
+    if num:
+        return int(i[0])
+    try:
+        return list(map(int, i))
+    except Exception:
+        return i
 
 
-def invr():  # For taking space seperated integer variable inputs
-    return map(int, input().split())
-
-
-def __main__():
-    # write your code here
+for tc in range(testCases(1)):
+    # Write your code here
     pass
-
-
-if __name__ == "__main__":
-    __main__()
